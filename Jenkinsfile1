@@ -17,7 +17,8 @@ stage('upload artifacts into repo')
 {
 sh "${mavenHome}/bin/mvn clean deploy"
 }
-/*stage('deploy to tomcat server')
+/*
+stage('deploy to tomcat server')
 {
 sshagent(['37db609b-4135-4dcb-8eff-cb359e82802a']) 
 {
@@ -27,5 +28,6 @@ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65
 stage('emailnotification')
 {
 emailext attachLog: true, body: 'Build is over', subject: 'Build', to: 'mpoojitha580@gmail.com,mandlapoojitha8@gmail.com'
-}*/
+}
+*/
 }
